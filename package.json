@@ -2,6 +2,7 @@
 	"name": "vecteur",
 	"version": "0.0.0",
 	"author": "Sikriti Dakua",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/devloop01/vecteur"
@@ -12,11 +13,10 @@
 	"types": "./dist/vecteur.d.ts",
 	"exports": {
 		".": {
+			"types": "./dist/vecteur.d.ts",
 			"import": "./dist/vecteur.js",
-			"require": "./dist/vecteur.cjs",
-			"types": "./dist/vecteur.d.ts"
-		},
-		"./package.json": "./package.json"
+			"require": "./dist/vecteur.cjs"
+		}
 	},
 	"files": [
 		"dist"
@@ -24,6 +24,7 @@
 	"scripts": {
 		"clean": "rm -rf dist/*",
 		"build": "pnpm clean && rollup -c",
+		"prepublishOnly": "pnpm build",
 		"changeset": "changeset",
 		"release": "changeset publish",
 		"test": "vitest"
