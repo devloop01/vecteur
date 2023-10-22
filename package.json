@@ -1,0 +1,49 @@
+{
+	"name": "vecteur",
+	"version": "0.0.0",
+	"author": "Sikriti Dakua",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devloop01/vecteur"
+	},
+	"type": "module",
+	"main": "./dist/vecteur.cjs",
+	"module": "./dist/vecteur.js",
+	"types": "./dist/vecteur.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/vecteur.js",
+			"require": "./dist/vecteur.cjs",
+			"types": "./dist/vecteur.d.ts"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"clean": "rm -rf dist/*",
+		"build": "pnpm clean && rollup -c",
+		"changeset": "changeset",
+		"release": "changeset publish",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.26.2",
+		"@types/node": "^20.8.5",
+		"@typescript-eslint/eslint-plugin": "^6.8.0",
+		"@typescript-eslint/parser": "^6.8.0",
+		"esbuild": "^0.19.5",
+		"eslint": "^8.51.0",
+		"prettier": "^3.0.3",
+		"rollup": "^4.1.4",
+		"rollup-plugin-dts": "^6.1.0",
+		"rollup-plugin-esbuild": "^6.1.0",
+		"typescript": "^5.0.2",
+		"vitest": "^0.34.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
+
