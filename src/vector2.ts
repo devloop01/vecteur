@@ -222,34 +222,37 @@ class Vector2 {
 
 	/**
 	 * Rotates the vector around a pivot by a given angle.
+	 * @param center vector/point to rotate around
+	 * @param angle Angle in radians
 	 * @example
-	 * const v = new Vector2(1, 0);
+	 * const v = new Vector2(4, 3);
 	 * const p = new Vector2(0, 0);
-	 * v.rotateAround(p, Math.PI / 2); // v is now equal to (0, 1)
+	 * v.rotateAround(p, Math.PI / 6); // v is now equal to (1.964, 4.598)
 	 * @returns this
 	 */
-	rotateAround(pivot: Vector2, angle: number) {
+	rotateAround(center: Vector2, angle: number) {
 		const c = Math.cos(angle)
 		const s = Math.sin(angle)
 
-		const x = this.x - pivot.x
-		const y = this.y - pivot.y
+		const x = this.x - center.x
+		const y = this.y - center.y
 
-		this.x = pivot.x + x * c - y * s
-		this.y = pivot.y + x * s + y * c
+		this.x = x * c - y * s + center.x
+		this.y = x * s + y * c + center.y
 
 		return this
 	}
 
 	/**
-	 * Rotates the vector by a given angle.
+	 * Rotates the vector by a given angle around the origin.
+	 * @param angle Angle in radians
 	 * @example
-	 * const v = new Vector2(1, 0);
-	 * v.rotate(Math.PI / 2); // v is now equal to (0, 1)
+	 * const v = new Vector2(4, 3);
+	 * v.rotate(Math.PI / 6); // v is now equal to (1.964, 4.598)
 	 * @returns this
 	 */
 	rotate(angle: number) {
-		return this.rotateAround(this, angle)
+		return this.rotateAround(new Vector2(), angle)
 	}
 
 	/**
