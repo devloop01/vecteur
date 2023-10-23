@@ -335,27 +335,33 @@ class Vector3 {
 	}
 
 	/**
-	 * Returns the minimum components of the vector and another vector.
+	 * Calculates the minimum components of the vector and another vector.
 	 * @example
 	 * const a = new Vector3(-2, 0, 3);
 	 * const b = new Vector3(5, -1, 2);
-	 * a.min(b); // returns (-2, -1, 2)
-	 * @returns minimum vector
+	 * a.min(b); // a becomes (-2, -1, 2)
+	 * @returns this
 	 */
 	min(v: Vector3) {
-		return new Vector3(Math.min(this.x, v.x), Math.min(this.y, v.y), Math.min(this.z, v.z))
+		this.x = Math.min(this.x, v.x)
+		this.y = Math.min(this.y, v.y)
+		this.z = Math.min(this.z, v.z)
+		return this
 	}
 
 	/**
-	 * Returns the maximum components of the vector and another vector.
+	 * Calculates the maximum components of the vector and another vector.
 	 * @example
 	 * const a = new Vector3(-2, 0, 3);
 	 * const b = new Vector3(5, -1, 2);
-	 * a.max(b); // returns (5, 0, 3)
-	 * @returns maximum vector
+	 * a.max(b); // a becomes (5, 0, 3)
+	 * @returns this
 	 */
 	max(v: Vector3) {
-		return new Vector3(Math.max(this.x, v.x), Math.max(this.y, v.y), Math.max(this.z, v.z))
+		this.x = Math.max(this.x, v.x)
+		this.y = Math.max(this.y, v.y)
+		this.z = Math.max(this.z, v.z)
+		return this
 	}
 
 	/**
@@ -679,6 +685,22 @@ class Vector3 {
 	 */
 	static equals(a: Vector3, b: Vector3) {
 		return a.equals(b)
+	}
+
+	/**
+	 * Returns the minimum components of two vectors.
+	 * @returns The minimum vector.
+	 */
+	static min(a: Vector3, b: Vector3) {
+		return a.clone().min(b)
+	}
+
+	/**
+	 * Returns the maximum components of two vectors.
+	 * @returns The maximum vector.
+	 */
+	static max(a: Vector3, b: Vector3) {
+		return a.clone().max(b)
 	}
 
 	/**
