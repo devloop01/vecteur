@@ -540,7 +540,7 @@ class Vector2 {
 	 * @returns this
 	 */
 	lerpX(v: Vector2, alpha: number) {
-		this.x += lerp(this.x, v.x, alpha)
+		this.x = lerp(this.x, v.x, alpha)
 		return this
 	}
 
@@ -553,7 +553,7 @@ class Vector2 {
 	 * @returns this
 	 */
 	lerpY(v: Vector2, alpha: number) {
-		this.y += lerp(this.y, v.y, alpha)
+		this.y = lerp(this.y, v.y, alpha)
 		return this
 	}
 
@@ -566,8 +566,8 @@ class Vector2 {
 	 * @returns this
 	 */
 	lerp(v: Vector2, alpha: number) {
-		this.x += lerp(this.x, v.x, alpha)
-		this.y += lerp(this.y, v.y, alpha)
+		this.x = lerp(this.x, v.x, alpha)
+		this.y = lerp(this.y, v.y, alpha)
 		return this
 	}
 
