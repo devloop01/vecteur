@@ -1,4 +1,4 @@
-import { clamp, lerp, randomInRange } from './utils'
+import { clamp, lerp, randomInRange } from '../helpers/utils'
 
 export type Vector2Tuple = [number, number]
 

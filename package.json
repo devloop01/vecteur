@@ -8,14 +8,24 @@
 		"url": "https://github.com/devloop01/vecteur"
 	},
 	"type": "module",
-	"main": "./dist/vecteur.cjs",
-	"module": "./dist/vecteur.js",
-	"types": "./dist/vecteur.d.ts",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"types": "./dist/vecteur.d.ts",
-			"import": "./dist/vecteur.js",
-			"require": "./dist/vecteur.cjs"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./2d": {
+			"types": "./dist/2d/index.d.ts",
+			"import": "./dist/2d/index.js",
+			"require": "./dist/2d/index.cjs"
+		},
+		"./3d": {
+			"types": "./dist/2d/index.d.ts",
+			"import": "./dist/3d/index.js",
+			"require": "./dist/3d/index.cjs"
 		}
 	},
 	"files": [
@@ -45,3 +55,4 @@
 		"vitest": "^0.34.6"
 	}
 }
+
