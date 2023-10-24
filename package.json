@@ -1,6 +1,6 @@
 {
 	"name": "vecteur",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Sikriti Dakua",
 	"license": "MIT",
 	"repository": {
@@ -55,4 +55,3 @@
 		"vitest": "^0.34.6"
 	}
 }
-

@@ -1,5 +1,11 @@
 # vecteur
 
+## 0.1.1
+
+### Patch Changes
+
+- [`b3a65fe`](https://github.com/devloop01/vecteur/commit/b3a65fef146f22d12a1619e95616f9d41ff895f4) Thanks [@devloop01](https://github.com/devloop01)! - fix: `vecteur/2d` type exports
+
 ## 0.1.0
 
 ### Minor Changes
