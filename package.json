@@ -23,7 +23,7 @@
 			"require": "./dist/2d/index.cjs"
 		},
 		"./3d": {
-			"types": "./dist/2d/index.d.ts",
+			"types": "./dist/3d/index.d.ts",
 			"import": "./dist/3d/index.js",
 			"require": "./dist/3d/index.cjs"
 		}
@@ -55,3 +55,4 @@
 		"vitest": "^0.34.6"
 	}
 }
+
