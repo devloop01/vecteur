@@ -1,5 +1,11 @@
 # vecteur
 
+## 0.1.0
+
+### Minor Changes
+
+- [#5](https://github.com/devloop01/vecteur/pull/5) [`6905cfc`](https://github.com/devloop01/vecteur/commit/6905cfc7543990f17207f0ad9b1984ab1bf9f2d6) Thanks [@devloop01](https://github.com/devloop01)! - feat: add explcit exports from package. use `vecteur/2d` or `vecteur/3d` instead of `vecteur` to import the correct module.
+
 ## 0.0.3
 
 ### Patch Changes
