@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-import { Vector2 } from '../vector2'
+import { Vector2 } from '../2d/vector2'
 
 describe('Vector2 Class', () => {
 	describe('set', () => {

@@ -1,46 +1,55 @@
 import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
 
-import packageJson from './package.json' assert { type: 'json' }
-
-const name = packageJson.main.replace(/\.cjs$/, '')
-
-/**
- * @param {import('rollup').RollupOptions} config
- * @returns {import('rollup').RollupOptions}
- */
-const bundle = (config) => ({
-	...config,
-	input: 'src/index.ts',
-	external: (id) => !/^[./]/.test(id)
-})
+const buildPlugins = [esbuild({ minify: true, keepNames: true })]
 
 /**
  * @type {import('rollup').RollupOptions[]}
  */
 export default [
-	bundle({
-		plugins: [esbuild({ minify: true, keepNames: true })],
+	{
+		plugins: buildPlugins,
+		input: 'src/index.ts',
 		output: [
-			{
-				file: `${name}.js`,
-				format: 'esm'
-			},
-			{
-				file: `${name}.cjs`,
-				format: 'cjs'
-			}
+			{ file: 'dist/index.js', format: 'esm' },
+			{ file: 'dist/index.cjs', format: 'cjs' }
 		]
-	}),
+	},
 
-	bundle({
-		plugins: [dts()],
+	{
+		plugins: buildPlugins,
+		input: 'src/2d/index.ts',
 		output: [
-			{
-				file: `${name}.d.ts`,
-				format: 'esm'
-			}
+			{ file: 'dist/2d/index.js', format: 'esm' },
+			{ file: 'dist/2d/index.cjs', format: 'cjs' }
 		]
-	})
+	},
+
+	{
+		plugins: buildPlugins,
+		input: 'src/3d/index.ts',
+		output: [
+			{ file: 'dist/3d/index.js', format: 'esm' },
+			{ file: 'dist/3d/index.cjs', format: 'cjs' }
+		]
+	},
+
+	{
+		plugins: [dts()],
+		input: 'src/index.ts',
+		output: [{ file: 'dist/index.d.ts', format: 'esm' }]
+	},
+
+	{
+		plugins: [dts()],
+		input: 'src/2d/index.ts',
+		output: [{ file: 'dist/2d/index.d.ts', format: 'esm' }]
+	},
+
+	{
+		plugins: [dts()],
+		input: 'src/3d/index.ts',
+		output: [{ file: 'dist/3d/index.d.ts', format: 'esm' }]
+	}
 ]
 
