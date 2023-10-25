@@ -1,2 +1,3 @@
-export * from './2d/vector2'
-export * from './3d/vector3'
+export * from './2d'
+export * from './3d'
+
