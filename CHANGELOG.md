@@ -1,5 +1,13 @@
 # vecteur
 
+## 0.1.2
+
+### Patch Changes
+
+- [`a4ba92e`](https://github.com/devloop01/vecteur/commit/a4ba92e9ca434376ed53aad28c5dae47d74f7f47) Thanks [@devloop01](https://github.com/devloop01)! - fix: exports from base i.e. `vecteur/index`
+
+- [`36fbb99`](https://github.com/devloop01/vecteur/commit/36fbb99d38077e8b83cef0ebb1709f43d6dee4eb) Thanks [@devloop01](https://github.com/devloop01)! - update: add keywords in `package.json`
+
 ## 0.1.1
 
 ### Patch Changes
