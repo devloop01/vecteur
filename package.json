@@ -7,6 +7,12 @@
 		"type": "git",
 		"url": "https://github.com/devloop01/vecteur"
 	},
+	"keywords": [
+		"math",
+		"vector",
+		"typescript",
+		"javascript"
+	],
 	"type": "module",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
@@ -55,3 +61,4 @@
 		"vitest": "^0.34.6"
 	}
 }
+
