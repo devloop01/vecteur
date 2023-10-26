@@ -1,5 +1,13 @@
 # vecteur
 
+## 0.1.3
+
+### Patch Changes
+
+- [`850eccc`](https://github.com/devloop01/vecteur/commit/850eccc94969b8b3e607b54a48649649a285811b) Thanks [@devloop01](https://github.com/devloop01)! - update: package internal imports & build options
+
+- [`63f3abf`](https://github.com/devloop01/vecteur/commit/63f3abfcbaa584cec4564bcfeae09752a3abb177) Thanks [@devloop01](https://github.com/devloop01)! - update: js minification will not be default build option
+
 ## 0.1.2
 
 ### Patch Changes
