@@ -14,24 +14,24 @@
 		"javascript"
 	],
 	"type": "module",
-	"main": "./dist/index.cjs",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./dist/cjs/index.cjs",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/types/index.d.ts",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs"
+			"types": "./dist/types/index.d.ts",
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.cjs"
 		},
 		"./2d": {
-			"types": "./dist/2d/index.d.ts",
-			"import": "./dist/2d/index.js",
-			"require": "./dist/2d/index.cjs"
+			"types": "./dist/types/2d/index.d.ts",
+			"import": "./dist/esm/2d/index.js",
+			"require": "./dist/cjs/2d/index.cjs"
 		},
 		"./3d": {
-			"types": "./dist/3d/index.d.ts",
-			"import": "./dist/3d/index.js",
-			"require": "./dist/3d/index.cjs"
+			"types": "./dist/types/3d/index.d.ts",
+			"import": "./dist/esm/3d/index.js",
+			"require": "./dist/cjs/3d/index.cjs"
 		}
 	},
 	"files": [
@@ -61,3 +61,4 @@
 		"vitest": "^0.34.6"
 	}
 }
+
