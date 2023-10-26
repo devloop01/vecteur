@@ -1,7 +1,7 @@
 import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
 
-const buildPlugins = [esbuild({ minify: true, keepNames: true })]
+const buildPlugins = [esbuild()]
 
 /**
  * @type {import('rollup').RollupOptions[]}
