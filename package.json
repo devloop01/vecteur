@@ -47,17 +47,17 @@
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.2",
-		"@types/node": "^20.8.5",
+		"@changesets/cli": "^2.27.1",
+		"@types/node": "^20.11.30",
 		"@typescript-eslint/eslint-plugin": "^6.8.0",
 		"@typescript-eslint/parser": "^6.8.0",
 		"esbuild": "^0.19.5",
-		"eslint": "^8.51.0",
-		"prettier": "^3.0.3",
-		"rollup": "^4.1.4",
+		"eslint": "^8.57.0",
+		"prettier": "^3.2.5",
+		"rollup": "^4.13.0",
 		"rollup-plugin-dts": "^6.1.0",
 		"rollup-plugin-esbuild": "^6.1.1",
-		"typescript": "^5.0.2",
+		"typescript": "^5.4.3",
 		"vitest": "^0.34.6"
 	}
 }
