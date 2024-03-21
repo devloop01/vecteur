@@ -75,6 +75,20 @@ class Vector2 {
 	}
 
 	/**
+	 * Copies the x and y components of another vector.
+	 * @example
+	 * const v1 = new Vector2(1, 2);
+	 * const v2 = new Vector2(3, 4);
+	 * v1.copy(v2); // v1 is now equal to v2
+	 * @returns this
+	 */
+	copy(v: Vector2) {
+		this.x = v.x
+		this.y = v.y
+		return this
+	}
+
+	/**
 	 * Returns an array with the x and y components of the vector.
 	 * @example
 	 * const v = new Vector2(1, 2);
