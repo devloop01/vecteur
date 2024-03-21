@@ -1,5 +1,11 @@
 # vecteur
 
+## 0.2.0
+
+### Minor Changes
+
+- [#10](https://github.com/devloop01/vecteur/pull/10) [`7c8de7e`](https://github.com/devloop01/vecteur/commit/7c8de7ec4d30f1858c4244886bf5703d88cb523a) Thanks [@devloop01](https://github.com/devloop01)! - feat: add `copy()` method for `Vector2` & `Vector3`
+
 ## 0.1.3
 
 ### Patch Changes
