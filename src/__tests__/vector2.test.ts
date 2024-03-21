@@ -60,6 +60,15 @@ describe('Vector2 Class', () => {
 		})
 	})
 
+	describe('copy', () => {
+		it('should copy the components of another vector', () => {
+			const vectorA = new Vector2(3, 4)
+			const vectorB = new Vector2().copy(vectorA)
+			expect(vectorB.x).toBe(vectorA.x)
+			expect(vectorB.y).toBe(vectorA.y)
+		})
+	})
+
 	describe('toArray', () => {
 		it('should return an array with the components of the vector', () => {
 			const vector = new Vector2(5, 6)
