@@ -38,26 +38,32 @@
 		"dist"
 	],
 	"scripts": {
-		"clean": "rm -rf dist/*",
+		"dev": "pnpm clean && rollup -c -w",
 		"build": "pnpm clean && rollup -c",
-		"prepublishOnly": "pnpm build",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"test": "vitest",
 		"changeset": "changeset",
 		"release": "changeset publish",
-		"test": "vitest"
+		"clean": "rm -rf dist/*",
+		"prepublishOnly": "pnpm build"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.5.0",
 		"@changesets/cli": "^2.27.9",
+		"@eslint/js": "^9.13.0",
 		"@types/node": "^22.8.4",
 		"@typescript-eslint/eslint-plugin": "^8.12.2",
 		"@typescript-eslint/parser": "^8.12.2",
 		"esbuild": "^0.24.0",
 		"eslint": "^9.13.0",
+		"globals": "^15.11.0",
 		"prettier": "^3.3.3",
 		"rollup": "^4.24.3",
 		"rollup-plugin-dts": "^6.1.1",
 		"rollup-plugin-esbuild": "^6.1.1",
 		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.12.2",
 		"vitest": "^2.1.4"
 	},
 	"packageManager": "pnpm@9.9.0"
