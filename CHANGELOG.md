@@ -1,5 +1,11 @@
 # vecteur
 
+## 0.3.0
+
+### Minor Changes
+
+- [#15](https://github.com/devloop01/vecteur/pull/15) [`7b77c9a`](https://github.com/devloop01/vecteur/commit/7b77c9abbd76dcad78ba13bef40b4edfbacbb1d1) Thanks [@devloop01](https://github.com/devloop01)! - feat: single minified build
+
 ## 0.2.0
 
 ### Minor Changes
