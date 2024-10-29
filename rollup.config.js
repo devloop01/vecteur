@@ -1,28 +1,11 @@
+import { defineConfig } from 'rollup'
 import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
 
-/**
- * @param {import('rollup').RollupOptions} config
- * @returns {import('rollup').RollupOptions}
- */
-const bundle = (config) => ({
-	...config,
-	input: 'src/index.ts',
-	external: (id) => !/^[./]/.test(id)
-})
-
-function removeJSdocComments() {
-	return {
-		name: 'remove-jsdoc-comments',
-		renderChunk(code) {
-			return code.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '')
-		}
-	}
-}
-
-export default [
-	bundle({
-		plugins: [esbuild(), removeJSdocComments()],
+export default defineConfig([
+	{
+		input: 'src/index.ts',
+		plugins: [esbuild()],
 		output: [
 			{
 				dir: 'dist/esm',
@@ -39,9 +22,10 @@ export default [
 				entryFileNames: '[name].cjs'
 			}
 		]
-	}),
+	},
 
-	bundle({
+	{
+		input: 'src/index.ts',
 		plugins: [esbuild({ minify: true, target: 'es2015' })],
 		output: [
 			{
@@ -50,9 +34,10 @@ export default [
 				exports: 'named'
 			}
 		]
-	}),
+	},
 
-	bundle({
+	{
+		input: 'src/index.ts',
 		plugins: [dts()],
 		output: {
 			dir: 'dist/types',
@@ -60,5 +45,5 @@ export default [
 			exports: 'named',
 			preserveModules: true
 		}
-	})
-]
+	}
+])
