@@ -42,6 +42,17 @@ export default [
 	}),
 
 	bundle({
+		plugins: [esbuild({ minify: true, target: 'es2015' })],
+		output: [
+			{
+				file: 'dist/vecteur.min.js',
+				format: 'es',
+				exports: 'named'
+			}
+		]
+	}),
+
+	bundle({
 		plugins: [dts()],
 		output: {
 			dir: 'dist/types',
@@ -51,4 +62,3 @@ export default [
 		}
 	})
 ]
-
